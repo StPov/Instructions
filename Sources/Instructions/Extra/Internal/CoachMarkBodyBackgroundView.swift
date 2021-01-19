@@ -23,7 +23,7 @@ class CoachMarkBodyBackgroundView: UIView,
     public var cornerRadius: CGFloat = 8
 
     public lazy var innerColor = InstructionsColor.coachMarkInner
-    public lazy var borderColor = InstructionsColor.coachMarkOuter
+    public lazy var coachBorderColor = InstructionsColor.coachMarkOuter
 
     public lazy var highlightedInnerColor = InstructionsColor.coachMarkHighlightedInner
     public lazy var highlightedBorderColor = InstructionsColor.coachMarkOuter
@@ -60,7 +60,7 @@ class CoachMarkBodyBackgroundView: UIView,
             backgroundLayer.fillColor = highlightedBorderColor.cgColor
         } else {
             foregroundLayer.fillColor = innerColor.cgColor
-            backgroundLayer.fillColor = borderColor.cgColor
+            backgroundLayer.fillColor = coachBorderColor.cgColor
         }
 
         foregroundLayer.path = makeInnerRoundedPath(cornerRadius: cornerRadius - 0.5)
@@ -69,7 +69,7 @@ class CoachMarkBodyBackgroundView: UIView,
 
     // MARK: Internal Methods
     func updateValues(from bodyBackground: CoachMarkBodyBackgroundStyle) {
-        borderColor = bodyBackground.borderColor
+        coachBorderColor = bodyBackground.coachBorderColor
         innerColor = bodyBackground.innerColor
         highlightedBorderColor = bodyBackground.highlightedBorderColor
         highlightedInnerColor = bodyBackground.highlightedInnerColor

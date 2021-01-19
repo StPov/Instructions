@@ -51,7 +51,7 @@ public class CoachMarkArrowDefaultView: UIView,
             backgroundLayer.fillColor = background.highlightedBorderColor.cgColor
         } else {
             foregroundLayer.fillColor = background.innerColor.cgColor
-            backgroundLayer.fillColor = background.borderColor.cgColor
+            backgroundLayer.fillColor = background.coachBorderColor.cgColor
         }
 
         foregroundLayer.path = makeInnerTrianglePath(orientation: orientation)

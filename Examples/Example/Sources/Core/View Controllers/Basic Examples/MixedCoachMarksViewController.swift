@@ -128,7 +128,7 @@ extension MixedCoachMarksViewsViewController: CoachMarksControllerDataSource {
 
         coachViews.bodyView.background.cornerRadius = 20
         coachViews.bodyView.background.innerColor = innerColor
-        coachViews.bodyView.background.borderColor = borderColor
+        coachViews.bodyView.background.coachBorderColor = coachBorderColor
         coachViews.bodyView.background.highlightedInnerColor = highlightedInnerColor
         coachViews.bodyView.background.highlightedBorderColor = highlightedBorderColor
         coachViews.bodyView.hintLabel.textColor = .white
@@ -136,7 +136,7 @@ extension MixedCoachMarksViewsViewController: CoachMarksControllerDataSource {
         coachViews.bodyView.separator.backgroundColor = .white
 
         coachViews.arrowView?.background.innerColor = innerColor
-        coachViews.arrowView?.background.borderColor = borderColor
+        coachViews.arrowView?.background.coachBorderColor = coachBorderColor
         coachViews.arrowView?.background.highlightedInnerColor = highlightedInnerColor
         coachViews.arrowView?.background.highlightedBorderColor = highlightedBorderColor
 
@@ -184,7 +184,7 @@ extension MixedCoachMarksViewsViewController: CoachMarksControllerDataSource {
 }
 
 private extension MixedCoachMarksViewsViewController {
-    var borderColor: UIColor {
+    var coachBorderColor: UIColor {
         let defaultColor = #colorLiteral(red: 0.521568656, green: 0.1098039225, blue: 0.05098039284, alpha: 1)
 
         if #available(iOS 13.0, *) {

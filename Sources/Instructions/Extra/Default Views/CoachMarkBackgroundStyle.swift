@@ -5,7 +5,7 @@ import UIKit
 
 public protocol CoachMarkBackgroundStyle {
     var innerColor: UIColor { get set }
-    var borderColor: UIColor { get set }
+    var coachBorderColor: UIColor { get set }
     var highlightedInnerColor: UIColor { get set }
     var highlightedBorderColor: UIColor { get set }
 }
